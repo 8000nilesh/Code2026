@@ -1,0 +1,743 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>eGazette-Recent Uploads</title>
+    <meta content="IE=9" http-equiv="X-UA-Compatible" />
+    <link rel="stylesheet" href="css3menu1/style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="Styles/style.css" />
+    <script src="css3menu1/mmenu.js" type="text/javascript"></script>
+    <style type="text/css">
+        .pager span
+        {
+            color: Red;
+            font-weight: bold;
+            font-size: 14pt;
+        }
+    </style>
+    <script type="text/javascript" language="javascript">
+        function isNumberKey(evt) {
+            try {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    alert("Please Enter only Numbers...");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            catch (ex) {
+                return false;
+            }
+        }
+    </script>
+</head>
+<body style="background: #F0F8FF url(images/illustration.jpg)" ms_positioning="GridLayout">
+    <form method="post" action="./RecentUploads.aspx?Category=3&amp;utm_source=chatgpt.com" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=k0Xk39oMBcctPteSGqKgK1diudGkT0XVWhPuCut9Heje1ZLoJ5JGfaZYFH0Kd9d0I9qo1vHsVSH46-naP2lVhWPOYRvbS7yQh7m8GqfYDitOS-hxAeax_DgB6MwRRwtlDA9jllN2ye3JY-yI9CZZV1y7pq2qJt0_yeigncjz-a01&amp;t=5c0e0825" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="20AF9FD9" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="iS6iW+W6MQqvoc2hcCtslAoJSKKZex+5+6gfuFbQH92RkRHIw9sFdRylrHe2Zb4GV9kQHXHE/326UFItLtUCZ+C9g7xMLGBaNYJB1TpveWCuHw6T6gvCm4PGST9/p6iLwVVhb2kfP4rFhpliOWkbkDYFz+lZFxsVqZJFuS5bSJB6/I5cZcoiTUb+cMgsFGnCbCINUCqZxEwFj2V8HLndKKSOsbmS0mI6eH9mQ+GdXqgfKGXw8+mb98D+IAFbYw8F0Uw8WNkfNyGV1vbv0g9G7e8oFKoyxhFjw7ksjywSXG44DA4LNOfE4p8BzyM7wTaxe5L9ZXZld4iHKfhJlwK+tZjGSZGumS4+hL6l78bpCXpbvYWDoM1RbwCkERaBYHqyZeVnPARKmHi0IY+iYiG9rxAiYVrr5JCDMm8M2q1LP/En8i/whPJ2/H8gy1JtkxJFyLAG9tR70Jh1Yfj9jJ+w/uc0la9DpV9fwRnFgWgFqqmy2AfytsArXQE55psI1bliPos2KPEV+neo1Tpml91r/4MJtiLATZZxa9y6SrrUivFPij7XquKQzKIvuQ09INl7VNke7PfFDgA+r8SObCwzgT37CrVEiAxSGR9WqY6EBOcaOtONGLFIQvCUksY16D4Xc0Hf8Djuue+wLV+JcduZN0pc8NPTG4vol9n/53XGayYjeqSPRCKw1EijCc0gr1ukORflymEEQLzYe8PQwGGbPlVYNa+db8JeoZZwXnroVeQ=" />
+    <div style="margin: 0 auto; background: #7D7D7D; background-image: url('css3menu1/mainbk7 (3).jpg');
+        background-repeat: repeat; width: 100%;">
+        <table style="margin: 0 auto; width: 100%; border-radius: 1.6em 1.6em; -moz-border-radius: 1.6em 1em;
+            -webkit-border-radius: 1.6em 1em" align="center">
+	<tr>
+		<td width="2%">
+                </td>
+		<td align="left" width="8%">
+                    <img src="images/HEADER1.png" height="100PX" alt="" />
+                </td>
+		<td align="left" width="25%" style="font-size: small; color: #FFFFFF;">
+                    <strong><span>Directorate of Printing<br />
+                        Department of Publication<br />
+                        M/o Housing and Urban Affairs<br />
+                        Government of India</span></strong><br />
+                </td>
+		<td align="center">
+                    <img src="images/gaz.png" alt="" />
+                </td>
+		<td align="right" width="33%">
+                    <img src="images/eglogofinal.png" id="Img1" />
+                </td>
+		<td width="2%">
+                </td>
+	</tr>
+</table>
+
+    </div>
+    
+    <center>
+        <input name="hidden1" type="hidden" id="hidden1" style="width: 10px" value="a7dc07edeca4a16b2b8e0eaae142415d" />
+        <div id="Div_Menu" style="margin: 0 auto; background: #; width: 98%;
+            border-radius: 1.6em 1.6em; -moz-border-radius: 1.6em 1em; -webkit-border-radius: 1.6em 1em">
+            <ul id="css3menu1" class="topmenu" style="width: 100%; background-color: #F0F8FF;">
+                <li class="topmenu"><a class="pressed" href="Default.aspx" style="height: 20px; line-height: 20px;">
+                    <img src="css3menu1/home2.png" alt="" />
+                    Home </a></li>
+            </ul>
+        </div>
+        <br />
+        <br />
+        <div id="Gazette_Status" align="center" style="width: 98%; border-style: solid;
+            border-color: dimgray; border-radius: 15px 15px 15px 15px;">
+            <table id="tbl_RecentGazette" align="center" width="100%" border="0" cellspacing="0" cellpadding="10">
+	<tr>
+		<td align="center" style="border-radius: 14px 14px 0px 0px; width: 100%" bgcolor="LightBlue">
+                        <span id="lbl_Heading"><b><font color="Black">Recent Gazette(s) - Land Acquisition</font></b></span>
+                    </td>
+	</tr>
+</table>
+
+            <br />
+            <br />
+            <table id="tbl_Gazette" align="center" width="100%" border="0">
+	<tr id="tr_result">
+		<td align="left" style="width: 50%;">
+                        <span id="lbl_Result"><b>Total No. of Gazettes : 100</b></span>
+                    </td>
+		<td align="right" style="width: 50%;">
+                        <input type="image" name="imgPrintS" id="imgPrintS" title="Print Standard Report" src="images/Print_New.png" />&nbsp;&nbsp;
+                        <input type="image" name="imgPrintD" id="imgPrintD" title="Print Detailed Report" src="images/Print.png" />
+                    </td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2">
+                        <div>
+			<table cellspacing="0" cellpadding="4" rules="all" AlternatingItemStyle-BackColor="LightBlue" border="1" id="gvGazetteList" width="100%">
+				<tr align="center" valign="top" bgcolor="LightBlue">
+					<th align="center" scope="col" width="5%"><font size="2"><b>S. No.</b></font></th><th align="left" scope="col" width="12%" nowrap="nowrap"><font size="2"><b>Ministry / Organization</b></font></th><th align="left" scope="col" width="10%" nowrap="nowrap"><font size="2"><b>Department</b></font></th><th align="left" scope="col" width="10%" nowrap="nowrap"><font size="2"><b>Office</b></font></th><th align="left" scope="col" nowrap="nowrap"><font size="2"><b>Subject</b></font></th><th scope="col" width="4%" nowrap="nowrap"><font size="2"><b>Category</b></font></th><th scope="col" width="6%" nowrap="nowrap"><font size="2"><b>Part & Section</b></font></th><th scope="col" width="8%" nowrap="nowrap"><font size="2"><b>Issue Date</b></font></th><th scope="col" width="8%" nowrap="nowrap"><font size="2"><b>Publish Date</b></font></th><th scope="col" width="8%" nowrap="nowrap"><font size="2"><b>Gazette ID</b></font></th><th scope="col" width="6%" nowrap="nowrap"><font size="2"><b>Download</b></font></th>
+				</tr><tr align="center">
+					<td align="right">
+                                        1.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_0"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_0"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_0"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_0"><font color="Black">Publication of E gazette Notification for Declaration of acquisition of land under Section 20(E) for land acquisition for Kherwadi Railway station development of circulating area of Goods shed in UP direction for holding passengers during Kumbh Mela traffic in 2027 District Nashik under the Railways Act, 1989 (24 of 1989).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_0"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_0"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_0"><font color="Black">31-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_0"><font color="Black">05-Sep-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_0"><font color="Black">CG-MH-E-05092026-276005</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl02$imgbtndownload" id="gvGazetteList_imgbtndownload_0" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_0"><font face="Calibri" size="3">1.77 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        2.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_1"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_1"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_1"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_1"><font color="Black">Publication of E gazette Notification for Declaration of acquisition of land under Section 20(E) for land acquisition for PH 53 Provision of 2 Nos. 6 M wide Foot Over Bridge with ramp at Kasbe Sukene Station for Kumbh Mela 2027 at Dist. Nashik under the Railways Act, 1989 (24 of 1989).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_1"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_1"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_1"><font color="Black">31-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_1"><font color="Black">03-Sep-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_1"><font color="Black">CG-MH-E-03092026-275962</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl03$imgbtndownload" id="gvGazetteList_imgbtndownload_1" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_1"><font face="Calibri" size="3">0.61 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        3.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_2"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_2"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_2"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_2"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) under, the Railways Act, 1989 (24 of 1989) for land acquisition of 05 villages Uruli Kanchan, Koregaon Mul, Sortapwadi, Tilekarwadi and Kunjirwadi of Haveli Taluka for 3rd and 4th line between Pune Solapur Wadi (394.91Km).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_2"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_2"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_2"><font color="Black">25-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_2"><font color="Black">02-Sep-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_2"><font color="Black">CG-MH-E-02092026-275940</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl04$imgbtndownload" id="gvGazetteList_imgbtndownload_2" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_2"><font face="Calibri" size="3">2.05 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        4.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_3"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_3"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_3"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_3"><font color="Black">Publication of E gazette Notification for Declaration of acquisition of land under Section 20(E) for land acquisition for Manmad Indore New Line (New Line between Manmad to New Dhule and Nardana to Dr. Ambedkar Nagar (309.43 Kms) project under the Railways Act, 1989 (24 of 1989).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_3"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_3"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_3"><font color="Black">25-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_3"><font color="Black">31-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_3"><font color="Black">CG-MH-E-31082026-275861</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl05$imgbtndownload" id="gvGazetteList_imgbtndownload_3" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_3"><font face="Calibri" size="3">0.68 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        5.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_4"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_4"><font color="Black">Construction Department</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_4"><font color="Black">East Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_4"><font color="Black">Publication of Gazette Notification to declaration of competent authority for land acquisition (CALA) in the district Munger and Begusarai(Bihar) for Double line between Jamalpur Munger with Bridge over Ganga Including Jamalpur avoiding line (15Km) of East Central Railway</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_4"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_4"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_4"><font color="Black">27-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_4"><font color="Black">27-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_4"><font color="Black">CG-BR-E-27082026-275846</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl06$imgbtndownload" id="gvGazetteList_imgbtndownload_4" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_4"><font face="Calibri" size="3">0.96 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        6.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_5"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_5"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_5"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_5"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) under the Railways Act, 1989 (24 of 1989) for land acquisition for Manmad Jalgaon 4th Line.</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_5"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_5"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_5"><font color="Black">25-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_5"><font color="Black">27-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_5"><font color="Black">CG-MH-E-27082026-275831</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl07$imgbtndownload" id="gvGazetteList_imgbtndownload_5" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_5"><font face="Calibri" size="3">1.19 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        7.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_6"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_6"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_6"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_6"><font color="Black">Publication of Gazette Notification for Appointment of Arbitrator under Section 20(F) (6) of The Railways Act, 1989 (24 of 1989) for land acquisition for Proposed Construction of ROB and RUB in lieu of Level Crossing Gates No. 44 between Bhusawal Badnera Section of Bhusawal Division in connection with project Proposed Construction of ROB and RUB (10 Nos.) in lieu of Level Crossing Gates between Igatpuri Manmad and Bhusawal Badnera Section of Bhusawal Division.</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_6"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_6"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_6"><font color="Black">26-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_6"><font color="Black">26-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_6"><font color="Black">CG-MH-E-26082026-275794</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl08$imgbtndownload" id="gvGazetteList_imgbtndownload_6" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_6"><font face="Calibri" size="3">1.08 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        8.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_7"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_7"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_7"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_7"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) for land acquisition in connection with Construction of ROBs and RUB of NGP division of LC No. 253 (Sonaghati) in connection with Proposed construction of ROB and RUB (7 Nos.) in lieu of Level Crossing Gates between Nagpur Itarsi and Nagpur Ballarshah section of Nagpur Division as Railway under the Railways Act, 1989 (24 of 1989).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_7"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_7"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_7"><font color="Black">24-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_7"><font color="Black">24-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_7"><font color="Black">CG-MH-E-24082026-275710</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl09$imgbtndownload" id="gvGazetteList_imgbtndownload_7" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_7"><font face="Calibri" size="3">1.83 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        9.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_8"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_8"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_8"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_8"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) for land acquisition in connection with Construction of ROB and RUB in lieu of level crossings No. 61 at Railway Km 477/3 4 Solapur Wadi section as Railway under the Railways Act, 1989 (24 of 1989).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_8"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_8"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_8"><font color="Black">24-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_8"><font color="Black">24-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_8"><font color="Black">CG-MH-E-24082026-275709</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl10$imgbtndownload" id="gvGazetteList_imgbtndownload_8" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_8"><font face="Calibri" size="3">1.8 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        10.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_9"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_9"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_9"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_9"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) under the Railways Act, 1989 (24 of 1989) for land acquisition in Village Mahurzari, Taluka Nagpur (Gramin), Dist. Nagpur for Itarsi Nagpur 4th line (297 Km).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_9"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_9"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_9"><font color="Black">21-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_9"><font color="Black">22-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_9"><font color="Black">CG-MH-E-22082026-275688</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl11$imgbtndownload" id="gvGazetteList_imgbtndownload_9" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_9"><font face="Calibri" size="3">1.16 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        11.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_10"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_10"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_10"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_10"><font color="Black">Publication of E gazette Notification for Declaration of acquisition of land under Section 20(E) under the Railways Act, 1989 (24 of 1989) for land acquisition for 3 villages Kadholi Buj, Manoli Buj and Govari Tq. Rajura under Dist. Chandrapur for Babupeth Sasti New Rail Line (13.114 Km).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_10"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_10"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_10"><font color="Black">21-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_10"><font color="Black">22-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_10"><font color="Black">CG-MH-E-22082026-275687</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl12$imgbtndownload" id="gvGazetteList_imgbtndownload_10" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_10"><font face="Calibri" size="3">1.23 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        12.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_11"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_11"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_11"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_11"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) under the Railways Act, 1989 (24 of 1989) for land acquisition in Village Godhani, Taluka Nagpur (Gramin), Dist. Nagpur for Itarsi Nagpur 4th line (297 Km).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_11"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_11"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_11"><font color="Black">21-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_11"><font color="Black">22-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_11"><font color="Black">CG-MH-E-22082026-275680</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl13$imgbtndownload" id="gvGazetteList_imgbtndownload_11" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_11"><font face="Calibri" size="3">2 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        13.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_12"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_12"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_12"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_12"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) under the Railways Act, 1989 (24 of 1989) for land acquisition in Village Bharatwada, Taluka Nagpur (Gramin), Dist. Nagpur for Itarsi Nagpur 4th line (297 Km).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_12"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_12"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_12"><font color="Black">19-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_12"><font color="Black">20-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_12"><font color="Black">CG-MH-E-20082026-275622</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl14$imgbtndownload" id="gvGazetteList_imgbtndownload_12" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_12"><font face="Calibri" size="3">0.69 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        14.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_13"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_13"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_13"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_13"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) under the Railways Act, 1989 (24 of 1989) for land acquisition of 2 villages Kolakhe and Chikhale in Panvel Taluka in connection with Chord Line between Chikhli and Somtane (3.706 Km) Railway Project.</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_13"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_13"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_13"><font color="Black">18-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_13"><font color="Black">20-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_13"><font color="Black">CG-MH-E-20082026-275610</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl15$imgbtndownload" id="gvGazetteList_imgbtndownload_13" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_13"><font face="Calibri" size="3">0.81 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        15.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_14"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_14"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_14"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_14"><font color="Black">Publication of E gazette Notification for Nomination of Sub Divisional Officer, Miraj (Maharashtra) as a competent authority under section 7(A) for land acquisition of Proposed construction of 2 lane ROB in lieu of LC 70 at KM 561/6 7 in KWV MRJ Section under the Railways Act, 1989 (24 of 1989).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_14"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_14"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_14"><font color="Black">18-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_14"><font color="Black">20-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_14"><font color="Black">CG-MH-E-20082026-275599</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl16$imgbtndownload" id="gvGazetteList_imgbtndownload_14" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_14"><font face="Calibri" size="3">0.56 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        16.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_15"><font color="Black">Ministry of Petroleum and Natural Gas</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_15"><font color="Black">REFINERY DIVISION</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_15"><font color="Black">Not Applicable</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_15"><font color="Black">Publication of Notification in Extra Ordinary Gazette of India under Clause (a) of Section 2 of the Petroleum and Minerals Pipelines (Acquisition of  Right of User in Land) Act, 1962 relating to Notification of Special Land Acquisition Officer, Siliguri (Teesta Barrage Project) and Special Land Acquisition Officer, Jalpaiguri as Competent Authority for IOCLs  Siliguri Jhapa Pipeline (SJPL) Project in the State of West Bengal</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_15"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_15"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_15"><font color="Black">19-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_15"><font color="Black">19-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_15"><font color="Black">CG-DL-E-19082026-275589</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl17$imgbtndownload" id="gvGazetteList_imgbtndownload_15" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_15"><font face="Calibri" size="3">0.94 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        17.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_16"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_16"><font color="Black">Construction Department</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_16"><font color="Black">East Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_16"><font color="Black">Publication of 7A Gazette Notification to declaration of Competent Authority for Land Acquisition (CALA) in connection with 3rd and 4th line between Danapur to Pandit Deen Dayal Upadhyay (198.05 Km) under Danapur Division of East Central Railway.</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_16"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_16"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_16"><font color="Black">17-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_16"><font color="Black">18-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_16"><font color="Black">CG-BR-E-18082026-275548</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl18$imgbtndownload" id="gvGazetteList_imgbtndownload_16" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_16"><font face="Calibri" size="3">0.76 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        18.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_17"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_17"><font color="Black">Construction Department</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_17"><font color="Black">Western Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_17"><font color="Black">Publication of extraordinary gazette under PART II Section 3 Sub Section (II) of the Railway Act 1989 (24 of 1989) in connection with Nomination of Competent Authority for Land Acquisition (CALA) for the Project New Dedicated Freight Corridor connecting Dankuni in the East to Surat in the West (Navsari district) in the state of Gujarat.</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_17"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_17"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_17"><font color="Black">14-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_17"><font color="Black">17-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_17"><font color="Black">CG-MH-E-17082026-275522</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl19$imgbtndownload" id="gvGazetteList_imgbtndownload_17" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_17"><font face="Calibri" size="3">0.52 MB</font></span>
+                                    </td>
+				</tr><tr align="center">
+					<td align="right">
+                                        19.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_18"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_18"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_18"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_18"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire land under Section 20(A) for land acquisition in connection with Kalyan Lonavala Section Construction of ROB and LHS in lieu of Level Crossing No. 34 at Railway km. 130/7 8 on Kalyan Lonavala Section as Railway under the Railways Act, 1989 (24 of 1989).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_18"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_18"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_18"><font color="Black">11-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_18"><font color="Black">17-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_18"><font color="Black">CG-MH-E-17082026-275510</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl20$imgbtndownload" id="gvGazetteList_imgbtndownload_18" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_18"><font face="Calibri" size="3">0.76 MB</font></span>
+                                    </td>
+				</tr><tr align="center" bgcolor="LightGrey">
+					<td align="right">
+                                        20.&nbsp;
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Ministry_19"><font color="Black">Ministry of Railways</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Department_19"><font color="Black">Construction Organization / Central Railway</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Office_19"><font color="Black">Office of Chief Administrative Officer / Construction</font></span>
+                                    </td><td align="left">
+                                        <span id="gvGazetteList_lbl_Subject_19"><font color="Black">Publication of E gazette Notification for Declaration of Intention to acquire of land under Section 20(A) under the Railways Act, 1989 (24 of 1989) for land acquisition in villages Ajangaon Bari, Mhasala, Pardi and Unkhed Taluka and Dist. Amravati for Bhusawal Badnera Wardha 3rd and 4th Line (313 Kms).</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_Category_19"><font color="Black">Extra Ordinary</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PartSection_19"><font color="Black">Part II-Section 3-Sub-Section (ii)</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_IssueDate_19"><font color="Black">11-Aug-2026</font></span>
+                                        
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_PublishDate_19"><font color="Black">15-Aug-2026</font></span>
+                                    </td><td>
+                                        <span id="gvGazetteList_lbl_UGID_19"><font color="Black">CG-MH-E-15082026-275486</font></span>
+                                        
+                                        
+                                    </td><td align="left">
+                                        
+                                        <input type="image" name="gvGazetteList$ctl21$imgbtndownload" id="gvGazetteList_imgbtndownload_19" src="images/pdf_icon.png" />
+                                        <span id="gvGazetteList_lbl_FileSize_19"><font face="Calibri" size="3">0.89 MB</font></span>
+                                    </td>
+				</tr><tr class="pager" align="center" bgcolor="LightBlue">
+					<td colspan="11"><font color="Blue"><table>
+						<tr>
+							<td><font color="Blue"><span>1</span></font></td><td><font color="Blue"><a href="javascript:__doPostBack(&#39;gvGazetteList&#39;,&#39;Page$2&#39;)"><font color="Blue">2</font></a></font></td><td><font color="Blue"><a href="javascript:__doPostBack(&#39;gvGazetteList&#39;,&#39;Page$3&#39;)"><font color="Blue">3</font></a></font></td><td><font color="Blue"><a href="javascript:__doPostBack(&#39;gvGazetteList&#39;,&#39;Page$4&#39;)"><font color="Blue">4</font></a></font></td><td><font color="Blue"><a href="javascript:__doPostBack(&#39;gvGazetteList&#39;,&#39;Page$5&#39;)"><font color="Blue">5</font></a></font></td>
+						</tr>
+					</table></font></td>
+				</tr>
+			</table>
+		</div>
+                    </td>
+	</tr>
+	<tr id="trPageNo">
+		<td align="center" valign="middle" colspan="2">
+                        <br />
+                        <span>Page Number</span>&nbsp;&nbsp;
+                        <input name="txtPageNo" type="text" id="txtPageNo" autocomplete="off" onkeypress="return isNumberKey(event)" style="text-align: center;" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a id="lnkGO" href="javascript:__doPostBack(&#39;lnkGO&#39;,&#39;&#39;)"><font color="Blue">Go</font></a>
+                    </td>
+	</tr>
+</table>
+
+            <br />
+        </div>
+        <br />
+        <br />
+    </center>
+    </form>
+</body>
+</html>
