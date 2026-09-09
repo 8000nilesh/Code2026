@@ -121,6 +121,46 @@ class MapView {
           className: "custom-map-tooltip"
         });
 
+        const docs = p.evidence_documents || [];
+        const docsHtml = docs.length > 0 ? `
+          <div style="margin-top: 10px; border-top: 1px solid #e2e8f0; padding-top: 8px;">
+            <div style="font-size: 11px; font-weight: 700; color: #475569; text-transform: uppercase; margin-bottom: 6px;">
+              📁 Evidence Documents (${docs.length})
+            </div>
+            ${docs.map(doc => {
+              // Direct view link if available, otherwise fallback using drive_file_id
+              const viewUrl = doc.gdrive_web_view_link ? doc.gdrive_web_view_link : (doc.drive_file_id ? `https://drive.google.com/file/d/${doc.drive_file_id}/view` : '#');
+              const canonicalId = doc.drive_file_id || doc.gdrive_file_id || 'N/A';
+              const docName = doc.filename || doc.file_name || 'Document.pdf';
+              const hashSnippet = doc.sha256_hash ? `${doc.sha256_hash.substring(0, 8)}...` : 'Verified';
+              return `
+                <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px;">
+                    <div style="font-weight: 600; font-size: 11.5px; color: #0f172a; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 170px;" title="${docName}">
+                      ${docName}
+                    </div>
+                    <a href="${viewUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background: #2563eb; color: #ffffff; text-decoration: none; padding: 3px 8px; border-radius: 4px; font-size: 10.5px; font-weight: 600; white-space: nowrap;">
+                      📄 Open PDF
+                    </a>
+                  </div>
+                  <div style="font-size: 10px; color: #64748b; margin-top: 3px; display: flex; justify-content: space-between;">
+                    <span>Drive ID: <code>${canonicalId.substring(0, 10)}...</code></span>
+                    <span>SHA: <code>${hashSnippet}</code></span>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        ` : `
+          <div style="margin-top: 8px; font-size: 11px; color: #94a3b8; font-style: italic;">
+            No evidence documents attached.
+          </div>
+        `;
+
+        const coordsText = (p.latitude && p.longitude)
+          ? `${p.latitude.toFixed(5)}° N, ${p.longitude.toFixed(5)}° E`
+          : 'Geo-Coordinates Pending';
+
         polygon.bindPopup(`
           <div class="map-popup-card">
             <div class="popup-header">
@@ -129,6 +169,7 @@ class MapView {
             </div>
             <div class="popup-body">
               <p><b>ULPIN:</b> <code>${p.ulpin}</code></p>
+              <p><b>Coordinates:</b> <code>${coordsText}</code></p>
               <p><b>Survey No:</b> ${p.survey_number}/${p.sub_division} (${p.village})</p>
               <p><b>Owner:</b> ${p.owner_name}</p>
               <p><b>Chainage:</b> KM ${p.chainage_start_km} &rarr; KM ${p.chainage_end_km} (${(p.chainage_end_km - p.chainage_start_km).toFixed(1)} km)</p>
@@ -136,6 +177,7 @@ class MapView {
               <p><b>Disbursement:</b> ₹${(p.disbursed_amount_inr / 1e7).toFixed(2)} Cr / ₹${(p.sanctioned_amount_inr / 1e7).toFixed(2)} Cr</p>
               ${p.bank_utr ? `<p><b>Bank UTR:</b> <code>${p.bank_utr}</code></p>` : `<p><b>Bank UTR:</b> <span class="text-danger">None / Unreconciled</span></p>`}
               ${p.court_stay ? `<div class="popup-alert-danger"><b>High Court Stay Active:</b> ${p.stay_details}</div>` : ""}
+              ${docsHtml}
             </div>
             <button class="popup-action-btn" onclick="window.app.selectParcel(${p.parcel_id})">Inspect in Sandbox</button>
           </div>

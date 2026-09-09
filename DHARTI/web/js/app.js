@@ -180,6 +180,41 @@ class AppController {
     this.setText("insp-utr", p.bank_utr || "None / Unreconciled");
     this.setText("insp-disputes", p.dispute_details || "Clear");
 
+    const coordsText = (p.latitude && p.longitude)
+      ? `${p.latitude.toFixed(5)}° N, ${p.longitude.toFixed(5)}° E`
+      : 'Geo-Coordinates Pending';
+    this.setText("insp-coords", coordsText);
+
+    const docsContainer = document.getElementById("insp-docs-list");
+    if (docsContainer) {
+      const docs = p.evidence_documents || [];
+      if (docs.length > 0) {
+        docsContainer.innerHTML = docs.map(doc => {
+          // If gdrive_web_view_link already exists, use it directly without reconstructing
+          const viewUrl = doc.gdrive_web_view_link ? doc.gdrive_web_view_link : (doc.drive_file_id ? `https://drive.google.com/file/d/${doc.drive_file_id}/view` : '#');
+          const canonicalId = doc.drive_file_id || doc.gdrive_file_id || 'N/A';
+          const docName = doc.filename || doc.file_name || 'Document.pdf';
+          const hashSnippet = doc.sha256_hash ? `${doc.sha256_hash.substring(0, 8)}...` : 'Verified';
+          return `
+            <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 8px; margin-bottom: 6px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 6px;">
+                <span style="font-weight: 600; font-size: 11px; color: #0f172a; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 140px;" title="${docName}">${docName}</span>
+                <a href="${viewUrl}" target="_blank" rel="noopener noreferrer" style="background: #2563eb; color: #fff; text-decoration: none; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 600; white-space: nowrap;">
+                  📄 Open PDF
+                </a>
+              </div>
+              <div style="font-size: 9.5px; color: #64748b; margin-top: 3px; display: flex; justify-content: space-between;">
+                <span>Drive ID: <code>${canonicalId.substring(0, 8)}...</code></span>
+                <span>SHA: <code>${hashSnippet}</code></span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        docsContainer.innerHTML = `<div style="font-size: 11px; color: #94a3b8; font-style: italic;">No evidence documents attached.</div>`;
+      }
+    }
+
     const stayEl = document.getElementById("insp-stay-box");
     if (stayEl) {
       if (p.court_stay) {

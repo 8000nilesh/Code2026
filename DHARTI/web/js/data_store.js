@@ -37,6 +37,8 @@ const DEFAULT_PARCELS = [
     tenure_type: "Patta / Ryotwari",
     khata_number: "KH-881",
     state: "ConstructionReady",
+    latitude: 13.24125,
+    longitude: 77.69520,
     boundary_wkt: "POLYGON((77.6812 13.2410, 77.7089 13.2435, 77.7092 13.2415, 77.6815 13.2390, 77.6812 13.2410))",
     sanctioned_amount_inr: 42000000.0,
     disbursed_amount_inr: 42000000.0,
@@ -44,7 +46,20 @@ const DEFAULT_PARCELS = [
     payment_status: "SUCCESS",
     court_stay: false,
     dispute_details: "None - Title clear and possession taken.",
-    rnr_allotments: "Allotted residential site 1,200 sqft in R&R Layout Phase 1"
+    rnr_allotments: "Allotted residential site 1,200 sqft in R&R Layout Phase 1",
+    evidence_documents: [
+      {
+        document_id: "DOC-P101-POSSESSION",
+        parcel_id: 101,
+        filename: "CALA_Possession_Certificate_P101.pdf",
+        document_type: "POSSESSION_CERTIFICATE_PDF",
+        mime_type: "application/pdf",
+        sha256_hash: "7b9e51f2a3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0",
+        drive_file_id: "1yBeG1CXKlOGIjwLh5urKlBPBfG4IjveJ",
+        gdrive_web_view_link: "https://drive.google.com/file/d/1yBeG1CXKlOGIjwLh5urKlBPBfG4IjveJ/view?usp=drivesdk",
+        created_at: "2026-09-07T10:00:00Z"
+      }
+    ]
   },
   {
     parcel_id: 102,
@@ -62,6 +77,8 @@ const DEFAULT_PARCELS = [
     tenure_type: "Patta / Ryotwari",
     khata_number: "KH-882",
     state: "ConstructionReady",
+    latitude: 13.24335,
+    longitude: 77.71828,
     boundary_wkt: "POLYGON((77.7089 13.2435, 77.7274 13.2452, 77.7276 13.2432, 77.7092 13.2415, 77.7089 13.2435))",
     sanctioned_amount_inr: 31500000.0,
     disbursed_amount_inr: 31500000.0,
@@ -69,7 +86,20 @@ const DEFAULT_PARCELS = [
     payment_status: "SUCCESS",
     court_stay: false,
     dispute_details: "None - Solatium and interest fully credited.",
-    rnr_allotments: "Livelihood annuity grant sanctioned."
+    rnr_allotments: "Livelihood annuity grant sanctioned.",
+    evidence_documents: [
+      {
+        document_id: "DOC-P102-AWARD",
+        parcel_id: 102,
+        filename: "Section_23_Award_Declaration_P102.pdf",
+        document_type: "AWARD_DECLARATION_PDF",
+        mime_type: "application/pdf",
+        sha256_hash: "5d4e3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d",
+        drive_file_id: "1bfjOJpZXkSOFhXWC4GAHDqRbBRYVpysb",
+        gdrive_web_view_link: "https://drive.google.com/file/d/1bfjOJpZXkSOFhXWC4GAHDqRbBRYVpysb/view?usp=drivesdk",
+        created_at: "2026-09-07T10:15:00Z"
+      }
+    ]
   },
   {
     parcel_id: 118,
@@ -87,6 +117,8 @@ const DEFAULT_PARCELS = [
     tenure_type: "Patta / Ryotwari",
     khata_number: "KH-883",
     state: "InjunctionImposed",
+    latitude: 13.24485,
+    longitude: 77.73443,
     boundary_wkt: "POLYGON((77.7274 13.2452, 77.7412 13.2465, 77.7415 13.2445, 77.7276 13.2432, 77.7274 13.2452))",
     sanctioned_amount_inr: 45000000.0,
     disbursed_amount_inr: 0.0,
@@ -95,7 +127,20 @@ const DEFAULT_PARCELS = [
     court_stay: true,
     stay_details: "High Court WP 4021/2023 Injunction Order",
     dispute_details: "Succession dispute between co-heirs & area mismatch (Cadastral 17,250 sqm vs RoR 15,000 sqm)",
-    rnr_allotments: "Pending dispute resolution"
+    rnr_allotments: "Pending dispute resolution",
+    evidence_documents: [
+      {
+        document_id: "DOC-WP4021-STAY",
+        parcel_id: 118,
+        filename: "High_Court_Karnataka_WP4021_Stay_Order.pdf",
+        document_type: "HIGH_COURT_STAY_DOCKET_PDF",
+        mime_type: "application/pdf",
+        sha256_hash: "3a8c62b5d4e7f1092a4e6b12f9d8c4e5a2b1c3d5e7f8a9b0c1d2e3f4a5b6c7d8",
+        drive_file_id: "1cBP6hQGUXv9rQXTk7KSfk4XRa7V64MR6",
+        gdrive_web_view_link: "https://drive.google.com/file/d/1cBP6hQGUXv9rQXTk7KSfk4XRa7V64MR6/view?usp=drivesdk",
+        created_at: "2026-09-07T11:00:00Z"
+      }
+    ]
   },
   {
     parcel_id: 104,
@@ -113,6 +158,8 @@ const DEFAULT_PARCELS = [
     tenure_type: "Patta / Ryotwari",
     khata_number: "KH-884",
     state: "ConstructionReady",
+    latitude: 13.24700,
+    longitude: 77.75750,
     boundary_wkt: "POLYGON((77.7412 13.2465, 77.7735 13.2495, 77.7738 13.2475, 77.7415 13.2445, 77.7412 13.2465))",
     sanctioned_amount_inr: 52500000.0,
     disbursed_amount_inr: 52500000.0,
@@ -120,7 +167,20 @@ const DEFAULT_PARCELS = [
     payment_status: "SUCCESS",
     court_stay: false,
     dispute_details: "None - Vested under Section 3D.",
-    rnr_allotments: "Vulnerable women-headed allowance credited."
+    rnr_allotments: "Vulnerable women-headed allowance credited.",
+    evidence_documents: [
+      {
+        document_id: "DOC-GAZETTE-3D-NE7",
+        parcel_id: 104,
+        filename: "Gazette_Notification_SO_2418E.pdf",
+        document_type: "GAZETTE_NOTIFICATION_3D_PDF",
+        mime_type: "application/pdf",
+        sha256_hash: "09430dc2e501e9bf12408190a16c0529c699856376887767d5cceb9971347ca7",
+        drive_file_id: "1flMaVbebAUFgaqxkLX7sDRhymFAN0LAT",
+        gdrive_web_view_link: "https://drive.google.com/file/d/1flMaVbebAUFgaqxkLX7sDRhymFAN0LAT/view?usp=drivesdk",
+        created_at: "2026-09-07T11:30:00Z"
+      }
+    ]
   },
   {
     parcel_id: 105,
@@ -138,6 +198,8 @@ const DEFAULT_PARCELS = [
     tenure_type: "Patta / Ryotwari",
     khata_number: "KH-885",
     state: "PossessionConfirmed",
+    latitude: 13.24935,
+    longitude: 77.78290,
     boundary_wkt: "POLYGON((77.7735 13.2495, 77.7920 13.2512, 77.7923 13.2492, 77.7738 13.2475, 77.7735 13.2495))",
     sanctioned_amount_inr: 31500000.0,
     disbursed_amount_inr: 0.0,
@@ -145,7 +207,20 @@ const DEFAULT_PARCELS = [
     payment_status: "AWAITING_CLEARANCE",
     court_stay: false,
     dispute_details: "Compensation sanction pending PFMS treasury batch release.",
-    rnr_allotments: "Agricultural relocation support scheduled."
+    rnr_allotments: "Agricultural relocation support scheduled.",
+    evidence_documents: [
+      {
+        document_id: "DOC-P105-PANCHNAMA",
+        parcel_id: 105,
+        filename: "Joint_Measurement_Survey_Panchnama_P105.pdf",
+        document_type: "PANCHNAMA_SURVEY_PDF",
+        mime_type: "application/pdf",
+        sha256_hash: "2bc5ba5a71e050b62792ef996ecfe3311456d8fb5ada78206504d7d7d12bafcd",
+        drive_file_id: "1G-P1aL7kXrA2rMEXs3fJeqL6OUJ4a1SV",
+        gdrive_web_view_link: "https://drive.google.com/file/d/1G-P1aL7kXrA2rMEXs3fJeqL6OUJ4a1SV/view?usp=drivesdk",
+        created_at: "2026-09-07T12:00:00Z"
+      }
+    ]
   }
 ];
 
